@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="Greet()">LogIn</button>
+    <script>
+        // we create function to do task
+
+        // function - keyword
+        // symbol ()
+
+        // example1 - task to write logic of bill calculation
+        function billCalculation(){
+            var product1 = "Bread"
+            var product2 = "Milk"
+
+            var price1 = 40
+            var price2 = 80
+
+            var total = price1 + price2
+            console.log("Total bill is " +total)
+        }
+        function Greet()
+        {
+            console.log("Welocme user")
+        }
+        // me ka ladle fuction ko call bhi karna hota hai
+        billCalculation()
+        Greet()   
+
+        // function with parameter
+        function add( num1 , num2)
+        {
+            let result = num1 + num2
+           console.log("Addition of Two number " +result)
+        }
+        add(12,23.5)
+    </script>
+</body>
+</html>
