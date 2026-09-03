@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Array = ["sting", "Mango", Boolean]
+        let fruits = ["apple", "banana" , "Mango"]
+        // array methods
+        //1.  length of  array
+        console.log(fruits.length)
+        // add data - sala array hai ya vector
+        /// push("data") -> add data at last
+        fruits.push("orange")
+        console.log(fruits)
+
+        // if add data at the start of array
+        // unshift("New data")
+        fruits.unshift("Kivi")
+        console.log(fruits)
+
+        // delete the data from last
+        // pop()
+        fruits.pop()
+        console.log(fruits)
+         
+        // if remove the data from start
+        // shift()
+        fruits.shift()
+        console.log(fruits)
+        
+        // add data in your specific index
+        // splice(indexno , 0- keep the previous data at that index no or 1 it will replace the previous data , "new value")
+        fruits.splice(1, 0, "watermeler")
+        console.log(fruits)
+    </script>
+</body>
+</html>

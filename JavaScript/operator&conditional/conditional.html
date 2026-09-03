@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // conditional statement
+
+        //1. if(conditon) -> it will give you output when conditon is ture
+        let age = 12
+        if(age>18){
+            console.log("Elegible")
+            alert("Eligibal for driving ")
+        }
+        else{
+           console.log("Not elegibal for driving") 
+        }
+
+        // multiple condition
+        // else if
+        // if amount is greater than 500 then free delivery
+        // amount is between 400 - 499 then charges is 30
+        // amount is between 300 - 399 50 charges
+        // cannont place order cart value is 300
+        let amount = 200
+        if(amount>500)
+        {
+            alert('Free delivery')
+        }
+        else if(amount>=400)
+        {
+            alert('30 ruppe charges')
+        }
+        else if(amount>=300){
+            alert('50 ruppe charges')
+        }
+        else{
+            alert('cannot place order value less than 300')
+        }
+    </script>
+</body>
+</html>
