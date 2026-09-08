@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn" onclick="theme()">
+      🌙
+    </button>
+    <script>
+        // function theme(){
+        //     const ele = document.getElementById("btn")
+        //     ele.textContent = "☀️"
+        //     // select entire webpage 
+        //     document.body.style.background = "black"
+        //     ele.onclick = "reverse(ele)"
+        // }
+        
+        function theme()
+        {
+            const button = document.getElementById("btn")
+            if(document.body.style.background === "white"){
+                button.textContent = "🌙"
+                document.body.style.background = "black"
+            }
+            else{
+                button.textContent = "☀️"
+                document.body.style.background = "white"
+            }
+        }
+    </script>
+</body>
+</html>

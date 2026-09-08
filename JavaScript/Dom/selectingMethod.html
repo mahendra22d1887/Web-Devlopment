@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="abc">Hello guys</p>
+    <p id = "xyz">Web Devlopment</p>
+
+    <div class = "myClass">Ai devloper</div>
+    <div class = "myClass">Backend devloper</div>
+    <p>plain element without class and id</p>
+
+    <div class="box">Module 1</div>
+    <div class="box">Module 2</div>
+
+    <ul id="data">
+
+    </ul>
+    <script>
+        // DOM
+        // Element = HTML tag
+        // Document = webPage
+        // selecting Method - select means to choose HTML tag through JS
+        
+        //1. getElementById("Id name value")
+       let p = document.getElementById("abc")
+       console.log(p)
+       let q = document.getElementById("xyz")
+       console.log(q.textContent)
+    
+       // get element by class name
+       let ele = document.getElementsByClassName("myClass") // it treat it as array
+       console.log(ele)
+       console.log(ele[1].textContent)
+
+       // tag without id and class - tagName
+       let ele1 = document.getElementsByTagName("p")
+       console.log(ele1)
+       console.log(ele1[2].textContent)
+
+       //4. querrySelector -> follows the rule of css selector - #IdnName , .className , TagName
+       // select element - select on top element tag 
+       const x = document.querySelector(".box")
+        console.log(x) 
+    // query selectorAll - It will select all the page
+        const y = document.querySelectorAll(".box")
+        console.log(y)
+        console.log(y[1].textContent)
+
+        const ul = document.getElementById("data")
+
+        // createElement
+        const list = document.createElement("li") 
+        list.textContent = "water"
+        list.textContent = "Fire"
+        ul.appendChild(list)
+        
+    </script>
+</body>
+</html>

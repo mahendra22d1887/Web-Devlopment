@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            color: lightgreen;
+        }
+        body{
+            font-family: cursive;
+            text-align: center;
+            background-color: blanchedalmond;
+            margin: 50px;
+        }
+        .choice{
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .choice button{
+            margin: 12px;
+            padding: 15px;
+            border: none;
+            font-size: 20px;
+            border-radius: 12px;
+        }
+        .rock{background-color: aqua;}
+        .paper{background-color: violet;}
+        .scissor{background-color:brown;}
+
+        #result{
+            margin-top: 12px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .scoreboard{
+            color: blueviolet;
+            background-color: cadetblue;
+            margin: 13px;
+            padding: 12px;
+            border-radius: 12px;
+            border: none;
+            display: block;
+            box-shadow: 0 0 5px white;
+        }
+        .reset{
+            background-color: chartreuse;
+            font-size: 20px;
+            border-radius: 15px;
+            border: none;
+            margin-top: 12px;
+            padding: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rock Paper scissors</h1>
+
+    <div class="choice">
+       <button class="rock" onclick="palyGame('rock')">Rock</button>
+       <button class="paper" onclick="palyGame('paper')">Paper</button>
+       <button class="scissor" onclick="palyGame('scissor')">Scissor</button>
+    </div>
+
+    <p id="result">Choose an option to play the game</p>
+
+    <div class="scoreboard">
+      <p><strong>scoreboard</strong></p>
+      <p>wins : <span id="win">0</span></p>
+      <p>Losses : <span id="loss">0</span></p>
+      <p>Draw : <span id="draw">0</span></p>
+    </div>
+
+    <button class="reset" onclick="reset()">Reset</button>
+
+    <script>
+        let win = 0
+        let loss = 0
+        let draw = 0
+        
+        function palyGame(userchoice)
+        {
+            const choices = ['rock' , 'paper' ,'scissor']
+           const computerchoice = choices[Math.floor(Math.random()*3)]
+
+           let resultMessage = ''
+           if(userchoice===computerchoice){
+            resultMessage = "you pick the same option , It draw '" + userchoice;
+            draw++
+           }
+           else if(
+            (userchoice==='rock' && computerchoice === 'scissor') ||
+             (userchoice==='paper' && computerchoice === 'rock') ||
+             (userchoice === 'scissor' && computerchoice === 'paper')
+           ){
+            resultMessage = 'you won ' +userchoice+ ' beats ' + computerchoice;
+            win++
+           }
+           else{
+            resultMessage = 'you losses '+computerchoice + ' beats '+ userchoice;
+            loss++
+           }
+
+            document.getElementById("result").innerHTML = resultMessage
+            document.getElementById("win").innerHTML = win
+            document.getElementById("loss").innerHTML = loss
+            document.getElementById("draw").innerHTML = draw
+
+           
+        }
+        function reset(){
+            win = 0;
+            loss = 0
+            draw = 0
+            document.getElementById("win").innerHTML = win
+            document.getElementById("loss").innerHTML = loss
+            document.getElementById("draw").innerHTML = draw
+            document.getElementById("result").innerHTML = "Choose an option to play the game"
+
+        }
+
+    </script>
+</body>
+</html>
