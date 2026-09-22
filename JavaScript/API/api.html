@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+      // https://randomuser.me/api
+
+    // fetch("API address") -> method - to get the data from API
+    // Rule 1: convert into json format -> .json()
+    
+    fetch("https://randomuser.me/api")
+    // .then() -> output when it is sucessfully
+
+    // .catch() -> output when it is unsucessfull
+
+    .then(respose => respose.json())
+    .then(data => console.log(data.results))
+    .catch(error => console.log("Error connecting" , error))
+
+  </script>
+
+</body>
+</html>

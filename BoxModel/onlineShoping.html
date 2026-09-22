@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: cursive;
+            background-color: #f8f8f8;
+            margin: 0;
+        }
+        .parent{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            gap: 30px;
+            padding: 10px;
+        }
+        .product{
+            border:1px solid black;
+            overflow: hidden;
+            text-align: center;
+            border-radius: 12px;
+            padding-bottom: 12px;
+            background-color: white;
+            color: red;
+            transition: 1s ease;
+            
+
+        }
+        .product img{
+          width: 100%;
+          height:200px;
+          border-radius: 12px;
+        }
+        .product button{
+            background-color: lightgreen;
+            border: none;
+            border-radius: 12px;
+            padding: 10px;
+            cursor: pointer;
+            color: gray;
+        }
+        .product:hover{
+            transform: scale(1.02);
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+      <div class="product">
+       <img src="https://images.pexels.com/photos/1027130/pexels-photo-1027130.jpeg">
+       <h2>Headphone</h2>
+       <p><del>60$</del> <mark>40$</mark></p>
+       <button>Add to cart</button>
+      </div>
+
+      <div class="product">
+       <img src="https://images.pexels.com/photos/20432893/pexels-photo-20432893.jpeg">
+       <h2>Laptop</h2>
+       <p><del>800$</del><mark>500$</mark></p>
+       <button>Add to cart</button>
+     </div>
+
+     <div class="product">
+       <img src="https://images.pexels.com/photos/33352856/pexels-photo-33352856.jpeg">
+       <h2>Books</h2>
+       <p><del>6$</del><mark>4$</mark></p>
+       <button>Add to Cart</button>
+     </div>
+
+     <div class="product">
+       <img src="https://images.pexels.com/photos/11860562/pexels-photo-11860562.jpeg">
+       <h2>Water bottle</h2>
+       <p><del>3$</del><mark>2$</mark></p>
+       <button>Add to cart</button>
+     </div>
+
+     <div class="product">
+       <img src="https://images.pexels.com/photos/14440412/pexels-photo-14440412.jpeg">
+       <h2>clothes</h2>
+       <p><del>15$</del><mark>10$</mark></p>
+       <button>Add to cart</button>
+     </div>
+
+     <div class="product">
+       <img src="https://images.pexels.com/photos/32737891/pexels-photo-32737891.jpeg">
+       <h2>Toy</h2>
+       <p><del>20$</del><mark>15$</mark></p>
+       <button>Add to cart</button>
+     </div>
+    </div>
+</body>
+</html>

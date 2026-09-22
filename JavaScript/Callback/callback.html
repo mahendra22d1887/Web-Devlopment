@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // callback is a function and it is passed as parameter function(callback) into another function
+        // function work(subject , callback){
+        //     console.log("doing home work for " + subject)
+        //     callback()
+        // }
+        // work('math', function(){
+        //     console.log("home work done")
+        // })
+
+        function greet(name ,callback){
+         console.log("hello welcome " + name)
+         callback()
+        }
+
+        greet("Arun" , function(){
+            setTimeout(function(){
+                console.log("How are you")
+            },3000)
+        })
+    </script>
+</body>
+</html>

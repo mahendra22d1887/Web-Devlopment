@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Asycn - multiple task at the same time
+        // Task 1 make coffee
+
+        function startTask(){
+            console.log("step 1 boil the water ...5sec")
+
+            setTimeout(function(){
+                console.log("step 2: water is ready")
+            },5000)
+
+            console.log("step 3: Doing the task")
+        }
+
+        function secondTask()
+        {
+            console.log("Hello evveryone")
+        }
+
+        startTask()
+        secondTask()
+        
+    </script>
+</body>
+</html>
